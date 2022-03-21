@@ -21,10 +21,16 @@ function img($file, array $props = [])
     }
 
     if (empty($props['src']) === true) {
-        $src = $file->url();
+        $thumb  = $file;
+        $width  = $file->width();
+        $height = $file->height();
     } else {
-        $src = $file->thumb($props['src'])->url();
+        $thumb  = $file->thumb($props['src']);
+        $width  = $props['src']['width'];
+        $height = ($file->height() / $file->width()) * $width;
     }
+
+    $src = $thumb->url();
 
     if (empty($props['srcset']) === true) {
         $srcset = null;
@@ -42,6 +48,8 @@ function img($file, array $props = [])
         'alt'     => $props['alt'] ?? ' ',
         'class'   => $props['class'] ?? null,
         'loading' => $loading,
+        'width'   => $width,
+        'height'  => $height,
         'src'     => $src,
         'srcset'  => $srcset,
     ]) . '>';
