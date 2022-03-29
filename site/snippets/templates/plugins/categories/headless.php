@@ -20,7 +20,7 @@
   'icon'    => 'integration',
   'title'   => 'Authentication',
   'layout'  => 'cardlets',
-  'columns' => 2,
+  'columns' => 3,
   'plugins' => page('plugins')->grandChildren()->filter('category', 'security')->filter('subcategory', 'authentication')->pluck('id')
 ]) ?>
 

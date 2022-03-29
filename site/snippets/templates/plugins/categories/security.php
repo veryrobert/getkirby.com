@@ -11,7 +11,7 @@
   'icon'    => 'lock',
   'title'   => 'Authentication',
   'layout'  => 'cardlets',
-  'columns' => 2,
+  'columns' => 3,
   'plugins' => $plugins->filter('subcategory', 'authentication')->pluck('id')
 ]) ?>
 

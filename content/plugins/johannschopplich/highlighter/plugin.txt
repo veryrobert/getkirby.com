@@ -15,3 +15,16 @@ Subcategory: syntax-highlighting
 ----
 
 Description: Server-side syntax highlighting for the Kirby code block & KirbyText
+
+----
+
+Example:
+
+```yaml
+fields:
+  example:
+    label: Paste code here
+    type: blocks
+    fieldsets:
+      - code
+```

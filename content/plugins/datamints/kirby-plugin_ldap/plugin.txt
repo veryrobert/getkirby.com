@@ -6,7 +6,11 @@ Repository: https://github.com/datamints/kirby-plugin_ldap
 
 ----
 
-Category: authentication
+Category: security
+
+----
+
+Subcategory: authentication
 
 ----
 

@@ -15,3 +15,16 @@ Subcategory: authentication
 ----
 
 Description: Allowing user login using an external CAS. It adds a new button under the panel login form to connect through CAS.
+
+----
+
+Example:
+
+```php
+return [
+  'flupe.kirby-cas' => [
+    'host'    => 'cas.ens-lyon.fr',
+    'context' => '/cas'
+  ]
+];
+```

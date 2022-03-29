@@ -27,7 +27,7 @@
   'id'      => 'enhancements',
   'icon'    => 'widget',
   'title'   => 'Enhancements',
-  'layout'  => 'cardlets',
+  'layout'  => 'cards',
   'columns' => 2,
   'plugins' => $plugins->filter('subcategory', '')->pluck('id')
 ]) ?>
