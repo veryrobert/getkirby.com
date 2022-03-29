@@ -4,12 +4,7 @@
   'title'   => 'Dashboards',
   'layout'  => 'cards',
   'columns' => 2,
-  'plugins' => [
-    'plugins/paulmorel/fathom-analytics',
-    'plugins/sylvainjule/matomo',
-    'plugins/rowdyrabouw/plausible',
-    'plugins/daandelange/simplestats',
-  ]
+  'plugins' => $plugins->filter('subcategory', 'dashboard')->pluck('id'),
 ]) ?>
 
 <?php snippet('templates/plugins/section', [

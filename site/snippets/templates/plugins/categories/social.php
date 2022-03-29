@@ -1,12 +1,4 @@
 <?php snippet('templates/plugins/section', [
-  'id'      => 'podcasts',
-  'icon'    => 'integration',
-  'title'   => 'Podcasts',
-  'layout'  => 'hero',
-  'plugins' => $plugins->filter('subcategory', 'podcasts')->pluck('id')
-]) ?>
-
-<?php snippet('templates/plugins/section', [
   'id'      => 'indieweb',
   'icon'    => 'integration',
   'title'   => 'Indieweb',

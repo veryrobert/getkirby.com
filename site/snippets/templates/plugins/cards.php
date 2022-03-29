@@ -12,7 +12,13 @@
               </div>
             </div>
           <?php else : ?>
-            <span style="--aspect-ratio: 2/1"></span>
+            <span class="block" style="--aspect-ratio: 2/1">
+              <span>
+                <span class="grid place-items-center" style="height: 100%">
+                  <?= icon($plugin->icon()) ?>
+                </span>
+              </span>
+            </span>
           <?php endif ?>
         </figure>
         <div class="p-6">

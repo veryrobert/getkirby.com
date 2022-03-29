@@ -1,4 +1,4 @@
-<div class="columns" style="--columns: <?= $columns ?? 3 ?>; --gap: var(--spacing-6)">
+<div class="columns" style="--columns: <?= $columns ?? 2 ?>; --gap: var(--spacing-6)">
   <?php foreach ($plugins as $plugin) : ?>
     <a class="block bg-white rounded overflow-hidden shadow" href="<?= $plugin->url() ?>">
       <article class="columns items-center" style="--columns: 4; --gap: var(--spacing-3)">
