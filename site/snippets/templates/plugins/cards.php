@@ -13,6 +13,12 @@
                 </div>
               </div>
             </div>
+          <?php elseif ($logo = $plugin->logo()) : ?>
+            <div style="--aspect-ratio: 2/1; background: var(--color-light)">
+              <div class="flex items-center justify-center">
+                <div style="height: 66%; --aspect-ratio: 1/1"><img src="<?= $logo->url() ?>" style="object-fit: contain; mix-blend-mode: multiply"></div>
+              </div>
+            </div>
           <?php else : ?>
             <span class="block" style="--aspect-ratio: 2/1">
               <span>

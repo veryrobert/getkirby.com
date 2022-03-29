@@ -15,3 +15,12 @@ Subcategory: content-protection
 ----
 
 Description: Password-protect pages easily, Panel blueprint included.
+
+----
+
+Example:
+
+```yaml
+fields:
+    security: fields/locked-pages
+```

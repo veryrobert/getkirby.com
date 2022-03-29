@@ -60,6 +60,11 @@ class PluginPage extends Page
         return Nest::create($info, $this);
     }
 
+    public function logo()
+    {
+        return $this->images()->findBy('name', 'logo');
+    }
+
     public function metadata(): array
     {
         return [

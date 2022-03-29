@@ -6,11 +6,7 @@ return function($page) {
   $category   = param('category');
   $heading    = 'Featured';
 
-  if ($category && array_key_exists($category, $categories) === false) {
-    $category = null;
-  }
-
-  if ($category) {
+  if ($category && array_key_exists($category, $categories) === true) {
     $plugins = $page
       ->children()
       ->children()
@@ -19,8 +15,17 @@ return function($page) {
 
     $plugins = $plugins->filterBy('category', $category);
     $heading = $categories[$category]['label'];
+
+  } else if ($category === 'all') {
+    $heading  = 'All plugins';
+    $category = 'all';
+    $plugins  = $page
+      ->children()
+      ->children()
+      ->sortBy('title', 'asc');
   } else {
-    $plugins = new Pages();
+    $category = null;
+    $plugins  = new Pages();
   }
 
   return [

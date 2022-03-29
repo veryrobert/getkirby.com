@@ -16,3 +16,10 @@ Subcategory: optimization
 
 Description: Automatic unique ID for pages, structure objects and files including performant helpers to retrieve them. Bonus: Cache for collections and tiny URLs.
 
+----
+
+Example:
+
+```php
+$page->AUTOID()
+```

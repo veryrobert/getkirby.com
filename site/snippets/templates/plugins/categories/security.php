@@ -16,10 +16,10 @@
 ]) ?>
 
 <?php snippet('templates/plugins/section', [
-  'id'      => 'authentication',
+  'id'      => 'content-protection',
   'icon'    => 'lock',
   'title'   => 'Content protection',
-  'layout'  => 'cardlets',
+  'layout'  => 'cards',
   'columns' => 2,
   'plugins' => $plugins->filter('subcategory', 'content-protection')->pluck('id')
 ]) ?>
@@ -28,7 +28,7 @@
   'id'      => 'utilities',
   'icon'    => 'lock',
   'title'   => 'Utilities',
-  'layout'  => 'cardlets',
+  'layout'  => 'cards',
   'columns' => 2,
   'plugins' => $plugins->filter('subcategory', '')->pluck('id')
 ]) ?>

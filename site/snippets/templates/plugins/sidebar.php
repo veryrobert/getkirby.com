@@ -10,6 +10,11 @@
         </a>
       </li>
       <li>
+        <a href="/plugins/category:all" <?= ariaCurrent($currentCategory === 'all') ?>>
+          <?= icon('list') ?> All plugins
+        </a>
+      </li>
+      <li>
         <button class="search-button" type="button" data-area="plugin">
           <?= icon('search') ?> Search
         </button>

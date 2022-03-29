@@ -15,3 +15,16 @@ Subcategory: caching
 ----
 
 Description: Boost the speed of Kirby by having content files of pages cached, with automatic unique ID, fast lookup and Tiny-URL.
+
+----
+
+Example:
+
+```php
+// kirby core
+$page = page($somePageId);
+// faster
+$page = boost($somePageId);
+// fastest
+$page = boost($somePageDirUri);
+```
