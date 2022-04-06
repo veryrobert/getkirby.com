@@ -2,12 +2,6 @@
 
 return [
     [
-        'pattern' => 'authors/(:all?)',
-        'action'  => function () {
-            return false;
-        }
-    ],
-    [
         'pattern' => 'hooks/clean',
         'method'  => 'GET|POST',
         'action'  => function () {
@@ -48,5 +42,17 @@ return [
                 die($e->getMessage() . '<br>Please contact us: support@getkirby.com');
             }
         }
-    ]
+    ],
+    [
+        'pattern' => 'pixels',
+        'action'  => function () {
+            return new Page([
+                'slug'     => 'pixels',
+                'template' => 'pixels',
+                'content'  => [
+                    'title' => 'Pixels'
+                ]
+            ]);
+        }
+    ],
 ];

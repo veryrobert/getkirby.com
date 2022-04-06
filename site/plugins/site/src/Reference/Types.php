@@ -113,7 +113,7 @@ class Types
      */
     public static function format(?string $type = null, bool $withLink = true, ?string $text = null): string
     {
-        if(empty($type) === true) {
+        if($type === null || $type === '') {
             return '';
         }
 
@@ -122,6 +122,11 @@ class Types
         // code element.
         if (preg_match('/^[^\\a-z0-9_\->:]+$/iu', $type) === 1) {
             return '<code>' . ($text ?? $type) . '</code>';
+        }
+
+        // handle nullable types
+        if (Str::startsWith($type, '?')) {
+            $type = substr($type, 1) . '|null';
         }
 
         // Multiple datatypes
@@ -204,6 +209,23 @@ class Types
         // Probably a code example (not a datatype),
         // just return a plain code tag
         return static::tag($text);
+    }
+
+
+    /**
+     * Extracts variable and type from parameter definition
+     *
+     * @param string $parameter
+     * @return array
+     */
+    public static function parameter(string $parameter): array
+    {
+        $argument = explode('=', $parameter);
+        $argument = explode(' ', trim($argument[0]));
+        return [
+            'variable' => $argument[count($argument) - 1],
+            'type'     => static::format($argument[count($argument) - 2] ?? '-')
+        ];
     }
 
     /**

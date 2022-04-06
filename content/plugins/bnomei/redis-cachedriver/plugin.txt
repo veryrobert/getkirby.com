@@ -10,4 +10,8 @@ Category: performance
 
 ----
 
-Description: Redis based Cache-Driver and Content-File Cache
+Subcategory: cachedriver
+
+----
+
+Description: Redis based Cache-Driver

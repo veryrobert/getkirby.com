@@ -1,0 +1,13 @@
+Title: Vendor
+
+----
+
+Price: €59/yr
+
+----
+
+Link: https://themesforkirby.com/themes/vendor
+
+----
+
+Prio: 4
