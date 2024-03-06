@@ -67,4 +67,4 @@ Each button can also define a `shortcut` which will trigger the button's `click`
 
 ## Use in the field
 
-Your new textare button won't automatically be included in the textarea's toolbar. To add it, (link: docs/reference/panel/fields/textarea#toolbar__customizing-the-toolbar text: use the `buttons` option).
+Your new textarea button won't automatically be included in the textarea's toolbar. To add it, (link: docs/reference/panel/fields/textarea#toolbar__customizing-the-toolbar text: use the `buttons` option).
